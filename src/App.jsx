@@ -12,7 +12,7 @@ import ShareProfile from './chapters/ShareProfile';
 export default function App() {
   return (
     <div className="App overflow-x-hidden">
-      <div className="container mx-auto px-4">
+      <div className="container mx-auto px-4 text-center">
         <Landing />
         <IntroSection />
         <MissionSection />
