@@ -1,6 +1,6 @@
 // src/chapters/IntroSection.jsx
 import React from 'react';
-import { motion } from 'framer-motion';
+import { motion as Motion } from 'framer-motion';
 
 export default function IntroSection() {
   return (
@@ -8,7 +8,7 @@ export default function IntroSection() {
       id="intro"
       className="min-h-screen flex flex-col items-center justify-center bg-gray-50 px-4 py-20 text-center"
     >
-      <motion.h2
+      <Motion.h2
         className="text-4xl md:text-5xl font-semibold text-center mb-6"
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -16,9 +16,9 @@ export default function IntroSection() {
         transition={{ duration: 0.8 }}
       >
         Jij bent de brug tussen AI en impact
-      </motion.h2>
+      </Motion.h2>
 
-      <motion.img
+      <Motion.img
         src="/avatar_placeholder.png"
         alt="Cinematic Avatar"
         className="w-64 h-64 rounded-2xl shadow-lg mb-8 object-cover"
@@ -28,7 +28,7 @@ export default function IntroSection() {
         transition={{ delay: 0.3, duration: 0.8 }}
       />
 
-      <motion.p
+      <Motion.p
         className="text-lg md:text-xl text-neutral-600 max-w-2xl leading-relaxed"
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
@@ -36,7 +36,7 @@ export default function IntroSection() {
         transition={{ delay: 0.6, duration: 0.8 }}
       >
         Je combineert creativiteit met controle. Je schakelt tussen frontend elegantie en backend robuustheid, met AI als ultiem hulpmiddel.
-      </motion.p>
+      </Motion.p>
     </section>
   );
 }
