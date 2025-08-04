@@ -1,11 +1,8 @@
-import { useRef } from 'react';
 import { motion as Motion } from 'framer-motion';
 
 export default function Landing() {
-  const sectionRef = useRef(null);
-
   const handleClick = () => {
-    sectionRef.current?.scrollIntoView({ behavior: 'smooth' });
+    document.getElementById('intro')?.scrollIntoView({ behavior: 'smooth' });
   };
 
   return (
@@ -87,7 +84,6 @@ export default function Landing() {
         Explore my dream job
       </Motion.button>
 
-      <div ref={sectionRef} className="w-full" />
     </section>
   );
 }
