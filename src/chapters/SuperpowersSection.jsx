@@ -1,5 +1,6 @@
 import React from 'react';
 import { motion as Motion } from 'framer-motion';
+import WrappedSection from '../components/WrappedSection';
 
 export default function SuperpowersSection() {
   const skills = [
@@ -9,7 +10,16 @@ export default function SuperpowersSection() {
   ];
 
   return (
-    <section id="superpowers" className="min-h-screen bg-white px-4 py-20 flex flex-col items-center justify-center text-center">
+    <WrappedSection
+      id="superpowers"
+      gradientClass="from-green-600 to-blue-300"
+      animation={{
+        initial: { opacity: 0, x: 50 },
+        whileInView: { opacity: 1, x: 0 },
+        viewport: { once: true },
+        transition: { duration: 0.6 },
+      }}
+    >
       <Motion.h2 className="text-4xl md:text-5xl font-semibold text-center mb-8">
         Waar jij in uitblinkt
       </Motion.h2>
@@ -24,6 +34,6 @@ export default function SuperpowersSection() {
           </Motion.div>
         ))}
       </div>
-    </section>
+    </WrappedSection>
   );
 }

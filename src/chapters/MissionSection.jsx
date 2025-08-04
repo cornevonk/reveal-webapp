@@ -1,19 +1,20 @@
 import React from 'react';
 import { motion as Motion } from 'framer-motion';
+import WrappedSection from '../components/WrappedSection';
 
 export default function MissionSection() {
   return (
-    <section
+    <WrappedSection
       id="mission"
-      className="min-h-screen flex flex-col items-center justify-center bg-white px-4 py-20 text-center"
+      gradientClass="from-blue-500 to-teal-300"
+      animation={{
+        initial: { opacity: 0, x: -50 },
+        whileInView: { opacity: 1, x: 0 },
+        viewport: { once: true },
+        transition: { duration: 0.7 },
+      }}
     >
-      <Motion.h2
-        className="text-4xl md:text-5xl font-semibold text-center mb-6"
-        initial={{ opacity: 0, y: 20 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true }}
-        transition={{ duration: 0.8 }}
-      >
+      <Motion.h2 className="text-4xl md:text-5xl font-semibold text-center mb-6">
         Waarom deze rol ertoe doet
       </Motion.h2>
 
@@ -29,6 +30,6 @@ export default function MissionSection() {
       </Motion.p>
 
       {/* Parallax-achtergrondvisual volgt hier */}
-    </section>
+    </WrappedSection>
   );
 }

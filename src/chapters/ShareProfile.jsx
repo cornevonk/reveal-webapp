@@ -1,9 +1,19 @@
 import React from 'react';
 import { motion as Motion } from 'framer-motion';
+import WrappedSection from '../components/WrappedSection';
 
 export default function ShareProfile() {
   return (
-    <section id="share" className="min-h-screen flex flex-col items-center justify-center bg-gray-50 px-4 py-20 text-center">
+    <WrappedSection
+      id="share"
+      gradientClass="from-sky-400 to-violet-500"
+      animation={{
+        initial: { opacity: 0 },
+        whileInView: { opacity: 1 },
+        viewport: { once: true },
+        transition: { duration: 0.8 },
+      }}
+    >
       <Motion.h2 className="text-3xl md:text-4xl font-semibold text-center mb-6">
         Deel je profiel met de wereld
       </Motion.h2>
@@ -18,6 +28,6 @@ export default function ShareProfile() {
           Download PNG
         </button>
       </Motion.div>
-    </section>
+    </WrappedSection>
   );
 }

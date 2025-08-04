@@ -1,20 +1,21 @@
 // src/chapters/IntroSection.jsx
 import React from 'react';
 import { motion as Motion } from 'framer-motion';
+import WrappedSection from '../components/WrappedSection';
 
 export default function IntroSection() {
   return (
-    <section
+    <WrappedSection
       id="intro"
-      className="min-h-screen flex flex-col items-center justify-center bg-gray-50 px-4 py-20 text-center"
+      gradientClass="from-fuchsia-600 to-lime-400"
+      animation={{
+        initial: { opacity: 0, y: 20 },
+        whileInView: { opacity: 1, y: 0 },
+        viewport: { once: true },
+        transition: { duration: 0.8 },
+      }}
     >
-      <Motion.h2
-        className="text-4xl md:text-5xl font-semibold text-center mb-6"
-        initial={{ opacity: 0, y: 20 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true }}
-        transition={{ duration: 0.8 }}
-      >
+      <Motion.h2 className="text-4xl md:text-5xl font-semibold text-center mb-6">
         Jij bent de brug tussen AI en impact
       </Motion.h2>
 
@@ -37,6 +38,6 @@ export default function IntroSection() {
       >
         Je combineert creativiteit met controle. Je schakelt tussen frontend elegantie en backend robuustheid, met AI als ultiem hulpmiddel.
       </Motion.p>
-    </section>
+    </WrappedSection>
   );
 }

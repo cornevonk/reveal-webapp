@@ -1,9 +1,19 @@
 import React from 'react';
 import { motion as Motion } from 'framer-motion';
+import WrappedSection from '../components/WrappedSection';
 
 export default function FinalCTASection() {
   return (
-    <section   id="intro"   className="min-h-screen flex flex-col items-center justify-center bg-gray-50 px-4 py-20 text-center" >
+    <WrappedSection
+      id="final"
+      gradientClass="from-red-500 to-yellow-500"
+      animation={{
+        initial: { opacity: 0, y: -30 },
+        whileInView: { opacity: 1, y: 0 },
+        viewport: { once: true },
+        transition: { duration: 0.8 },
+      }}
+    >
       <Motion.h2 className="text-4xl md:text-5xl font-semibold text-center mb-6">
         Deze functie past bij jou…
       </Motion.h2>
@@ -23,6 +33,6 @@ export default function FinalCTASection() {
           Deel profiel
         </button>
       </Motion.div>
-    </section>
+    </WrappedSection>
   );
 }
