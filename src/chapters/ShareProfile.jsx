@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion as Motion } from 'framer-motion';
-import { FaLinkedin, FaWhatsapp, FaDownload } from 'react-icons/fa';
+import { FaLinkedin, FaWhatsapp, FaDownload } from 'react-icons/fa6';
 
 export default function ShareProfile() {
   return (
