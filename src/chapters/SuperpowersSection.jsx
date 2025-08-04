@@ -18,7 +18,13 @@ export default function SuperpowersSection() {
           <Motion.div key={i} initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} transition={{ delay: i * 0.3 }}>
             <h3 className="text-lg font-medium">{skill.name}</h3>
             <div className="w-full bg-neutral-100 rounded-full h-2 mt-2 mb-1">
-              <div className="bg-gradient-to-r from-sky-400 to-blue-600 h-2 rounded-full" style={{ width: `${skill.level}%` }} />
+              <Motion.div
+                className="bg-gradient-to-r from-sky-400 to-blue-600 h-2 rounded-full shadow-[0_0_10px]"
+                initial={{ width: 0 }}
+                whileInView={{ width: `${skill.level}%` }}
+                viewport={{ once: true }}
+                transition={{ duration: 1 }}
+              />
             </div>
             <span className="text-sm text-neutral-500">{skill.level}%</span>
           </Motion.div>

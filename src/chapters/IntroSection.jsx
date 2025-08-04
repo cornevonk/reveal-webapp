@@ -2,17 +2,38 @@
 import React from 'react';
 import { motion as Motion } from 'framer-motion';
 
+const container = {
+  hidden: {},
+  visible: {
+    transition: {
+      staggerChildren: 0.3,
+    },
+  },
+};
+
+const fadeUp = {
+  hidden: { opacity: 0, y: 20 },
+  visible: { opacity: 1, y: 0 },
+};
+
+const scaleIn = {
+  hidden: { opacity: 0, scale: 0.8 },
+  visible: { opacity: 1, scale: 1 },
+};
+
 export default function IntroSection() {
   return (
-    <section
+    <Motion.section
       id="intro"
       className="min-h-screen flex flex-col items-center justify-center bg-gray-50 px-4 py-20 text-center"
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true }}
+      variants={container}
     >
       <Motion.h2
         className="text-4xl md:text-5xl font-semibold text-center mb-6"
-        initial={{ opacity: 0, y: 20 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true }}
+        variants={fadeUp}
         transition={{ duration: 0.8 }}
       >
         Jij bent de brug tussen AI en impact
@@ -22,21 +43,18 @@ export default function IntroSection() {
         src="/avatar_placeholder.png"
         alt="Cinematic Avatar"
         className="w-64 h-64 rounded-2xl shadow-lg mb-8 object-cover"
-        initial={{ scale: 0.8, opacity: 0 }}
-        whileInView={{ scale: 1, opacity: 1 }}
-        viewport={{ once: true }}
-        transition={{ delay: 0.3, duration: 0.8 }}
+        variants={scaleIn}
+        transition={{ duration: 0.8 }}
       />
 
       <Motion.p
         className="text-lg md:text-xl text-neutral-600 max-w-2xl leading-relaxed"
-        initial={{ opacity: 0 }}
-        whileInView={{ opacity: 1 }}
-        viewport={{ once: true }}
-        transition={{ delay: 0.6, duration: 0.8 }}
+        variants={fadeUp}
+        transition={{ duration: 0.8 }}
       >
         Je combineert creativiteit met controle. Je schakelt tussen frontend elegantie en backend robuustheid, met AI als ultiem hulpmiddel.
       </Motion.p>
-    </section>
+    </Motion.section>
   );
 }
+
