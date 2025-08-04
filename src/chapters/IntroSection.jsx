@@ -2,15 +2,15 @@
 import React from 'react';
 import { motion as Motion } from 'framer-motion';
 import { container, fadeUp, scaleIn } from '../utils/motionVariants';
+import WrappedSection from '../components/WrappedSection';
 
 export default function IntroSection() {
   return (
-    <Motion.section
+    <WrappedSection
       id="intro"
-      className="min-h-screen flex flex-col items-center justify-center bg-gray-50 px-4 py-20 text-center"
+      bgGradient="bg-gray-50"
       initial="hidden"
       whileInView="visible"
-      viewport={{ once: true }}
       variants={container}
     >
       <Motion.h2
@@ -36,7 +36,7 @@ export default function IntroSection() {
       >
         Je combineert creativiteit met controle. Je schakelt tussen frontend elegantie en backend robuustheid, met AI als ultiem hulpmiddel.
       </Motion.p>
-    </Motion.section>
+    </WrappedSection>
   );
 }
 
