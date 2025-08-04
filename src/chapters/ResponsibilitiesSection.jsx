@@ -1,9 +1,10 @@
 import React from 'react';
 import { motion as Motion } from 'framer-motion';
+import WrappedSection from '../components/WrappedSection';
 
 export default function ResponsibilitiesSection() {
   return (
-    <section id="responsibilities" className="min-h-screen bg-gray-50 px-4 py-20 flex flex-col items-center justify-center text-center">
+    <WrappedSection id="responsibilities" bgGradient="bg-gray-50">
       <Motion.h2
         className="text-4xl md:text-5xl font-semibold text-center mb-8"
         initial={{ opacity: 0, y: 20 }}
@@ -35,6 +36,7 @@ export default function ResponsibilitiesSection() {
           </Motion.div>
         ))}
       </div>
-    </section>
+    </WrappedSection>
   );
 }
+

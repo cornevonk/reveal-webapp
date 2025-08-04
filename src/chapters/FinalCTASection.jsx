@@ -1,14 +1,23 @@
 import React from 'react';
 import { motion as Motion } from 'framer-motion';
+import WrappedSection from '../components/WrappedSection';
 
 export default function FinalCTASection() {
   return (
-    <section id="cta" className="min-h-screen flex flex-col items-center justify-center bg-gray-50 px-4 py-20 text-center">
+    <WrappedSection id="cta" bgGradient="bg-gray-50">
       <Motion.h2 className="text-4xl md:text-5xl font-semibold text-center mb-6">
         Deze functie past bij jou…
       </Motion.h2>
-      <Motion.ul className="space-y-4 text-neutral-600 mb-10 text-center" initial={{ opacity: 0 }} whileInView={{ opacity: 1 }}>
-        {['Als je energie krijgt van AI als hulpmiddel','Als je ownership voelt voor alles wat je bouwt','Als je met visie én scherpte wilt bijdragen'].map((item, idx) => (
+      <Motion.ul
+        className="space-y-4 text-neutral-600 mb-10 text-center"
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+      >
+        {[
+          'Als je energie krijgt van AI als hulpmiddel',
+          'Als je ownership voelt voor alles wat je bouwt',
+          'Als je met visie én scherpte wilt bijdragen',
+        ].map((item, idx) => (
           <li key={idx} className="flex items-center justify-center">
             <span className="mr-2 text-teal-500">✨</span>
             {item}
@@ -23,6 +32,7 @@ export default function FinalCTASection() {
           Deel profiel
         </button>
       </Motion.div>
-    </section>
+    </WrappedSection>
   );
 }
+

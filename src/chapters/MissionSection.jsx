@@ -1,5 +1,6 @@
 import React from 'react';
 import { motion as Motion } from 'framer-motion';
+import WrappedSection from '../components/WrappedSection';
 
 const container = {
   hidden: {},
@@ -17,14 +18,7 @@ const item = {
 
 export default function MissionSection() {
   return (
-    <Motion.section
-      id="mission"
-      className="min-h-screen flex flex-col items-center justify-center bg-white px-4 py-20 text-center"
-      initial="hidden"
-      whileInView="visible"
-      viewport={{ once: true }}
-      variants={container}
-    >
+    <WrappedSection id="mission" bgGradient="bg-white" variants={container}>
       <Motion.h2
         className="text-4xl md:text-5xl font-semibold text-center mb-6"
         variants={item}
@@ -42,7 +36,7 @@ export default function MissionSection() {
       </Motion.p>
 
       {/* Parallax-achtergrondvisual volgt hier */}
-    </Motion.section>
+    </WrappedSection>
   );
 }
 

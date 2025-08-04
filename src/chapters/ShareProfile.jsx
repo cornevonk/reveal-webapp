@@ -1,10 +1,11 @@
 import React from 'react';
 import { motion as Motion } from 'framer-motion';
 import { FaLinkedin, FaWhatsapp, FaDownload } from 'react-icons/fa';
+import WrappedSection from '../components/WrappedSection';
 
 export default function ShareProfile() {
   return (
-    <section id="share" className="min-h-screen flex flex-col items-center justify-center bg-gray-50 px-4 py-20 text-center">
+    <WrappedSection id="share" bgGradient="bg-gray-50">
       <Motion.h2 className="text-3xl md:text-4xl font-semibold text-center mb-6">
         Deel je profiel met de wereld
       </Motion.h2>
@@ -48,6 +49,7 @@ export default function ShareProfile() {
       <p className="mt-6 text-lg font-medium bg-gradient-to-r from-teal-500 via-blue-500 to-purple-600 bg-clip-text text-transparent animate-pulse">
         Laat zien dat jij de AI-held bent!
       </p>
-    </section>
+    </WrappedSection>
   );
 }
+

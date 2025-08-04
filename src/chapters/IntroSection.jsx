@@ -1,6 +1,7 @@
 // src/chapters/IntroSection.jsx
 import React from 'react';
 import { motion as Motion } from 'framer-motion';
+import WrappedSection from '../components/WrappedSection';
 
 const container = {
   hidden: {},
@@ -23,14 +24,7 @@ const scaleIn = {
 
 export default function IntroSection() {
   return (
-    <Motion.section
-      id="intro"
-      className="min-h-screen flex flex-col items-center justify-center bg-gray-50 px-4 py-20 text-center"
-      initial="hidden"
-      whileInView="visible"
-      viewport={{ once: true }}
-      variants={container}
-    >
+    <WrappedSection id="intro" bgGradient="bg-gray-50" variants={container}>
       <Motion.h2
         className="text-4xl md:text-5xl font-semibold text-center mb-6"
         variants={fadeUp}
@@ -54,7 +48,7 @@ export default function IntroSection() {
       >
         Je combineert creativiteit met controle. Je schakelt tussen frontend elegantie en backend robuustheid, met AI als ultiem hulpmiddel.
       </Motion.p>
-    </Motion.section>
+    </WrappedSection>
   );
 }
 
