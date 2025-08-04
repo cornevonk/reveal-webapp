@@ -3,7 +3,7 @@ import { motion as Motion } from 'framer-motion';
 
 export default function FinalCTASection() {
   return (
-    <section   id="intro"   className="min-h-screen flex flex-col items-center justify-center bg-gray-50 px-4 py-20 text-center" >
+    <section id="cta" className="min-h-screen flex flex-col items-center justify-center bg-gray-50 px-4 py-20 text-center">
       <Motion.h2 className="text-4xl md:text-5xl font-semibold text-center mb-6">
         Deze functie past bij jou…
       </Motion.h2>
