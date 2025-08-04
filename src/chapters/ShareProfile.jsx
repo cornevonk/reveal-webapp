@@ -16,6 +16,7 @@ export default function ShareProfile() {
       >
         <div className="p-[2px] rounded-full bg-gradient-to-r from-teal-400 via-blue-500 to-purple-600">
           <Motion.button
+            type="button"
             className="flex items-center gap-2 px-4 py-2 bg-white rounded-full text-black"
             whileHover={{ scale: 1.1, rotate: 1 }}
             whileTap={{ scale: 0.95 }}
@@ -26,6 +27,7 @@ export default function ShareProfile() {
         </div>
         <div className="p-[2px] rounded-full bg-gradient-to-r from-teal-400 via-blue-500 to-purple-600">
           <Motion.button
+            type="button"
             className="flex items-center gap-2 px-4 py-2 bg-white rounded-full text-black"
             whileHover={{ scale: 1.1, rotate: 1 }}
             whileTap={{ scale: 0.95 }}
@@ -36,6 +38,7 @@ export default function ShareProfile() {
         </div>
         <div className="p-[2px] rounded-full bg-gradient-to-r from-teal-400 via-blue-500 to-purple-600">
           <Motion.button
+            type="button"
             className="flex items-center gap-2 px-4 py-2 bg-white rounded-full text-black"
             whileHover={{ scale: 1.1, rotate: 1 }}
             whileTap={{ scale: 0.95 }}
