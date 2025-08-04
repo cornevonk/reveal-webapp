@@ -14,16 +14,14 @@ export default function App() {
   return (
     <div className="App overflow-x-hidden">
       <ProgressNav />
-      <div className="container mx-auto px-4 text-center">
-        <Landing />
-        <IntroSection />
-        <MissionSection />
-        <ResponsibilitiesSection />
-        <SuperpowersSection />
-        <GrowthSection />
-        <FinalCTASection />
-        <ShareProfile />
-      </div>
+      <Landing />
+      <IntroSection />
+      <MissionSection />
+      <ResponsibilitiesSection />
+      <SuperpowersSection />
+      <GrowthSection />
+      <FinalCTASection />
+      <ShareProfile />
     </div>
   );
 }

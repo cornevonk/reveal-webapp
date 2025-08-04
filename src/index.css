@@ -4,7 +4,33 @@
 
 @layer base {
   body {
-    @apply m-0 min-h-screen font-sans text-white bg-gradient-diagonal from-midnight via-purple to-fuchsia;
+    @apply m-0 min-h-screen font-sans bg-gradient-to-b from-white via-slate-50 to-slate-100 text-neutral-700;
   }
 }
 
+@layer components {
+  .layout {
+    @apply max-w-4xl mx-auto px-6 py-24 space-y-12;
+  }
+  .headline {
+    @apply font-bold text-5xl md:text-6xl tracking-tight text-neutral-900;
+  }
+  .subheader {
+    @apply text-xl text-neutral-600;
+  }
+  .body-text {
+    @apply text-base text-neutral-700 leading-relaxed;
+  }
+  .text-gradient {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-lime-400 via-sky-400 to-violet-500;
+  }
+  .btn {
+    @apply rounded-full px-6 py-3 hover:scale-105 transition;
+  }
+  .btn-primary {
+    @apply text-white bg-sky-500;
+  }
+  .btn-outline {
+    @apply bg-white text-black ring-2 ring-black;
+  }
+}
