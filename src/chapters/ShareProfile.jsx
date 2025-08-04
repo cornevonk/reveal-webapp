@@ -1,6 +1,7 @@
 import React from 'react';
 import { motion as Motion } from 'framer-motion';
 import { FaLinkedin, FaWhatsapp, FaDownload } from 'react-icons/fa6';
+import html2canvas from 'html2canvas';
 
 export default function ShareProfile() {
   const handleLinkedInShare = () => {
@@ -17,7 +18,6 @@ export default function ShareProfile() {
 
   const handleDownload = async () => {
     try {
-      const html2canvas = (await import('https://esm.sh/html2canvas')).default;
       const node = document.getElementById('share');
       if (!node) return;
       const canvas = await html2canvas(node);
