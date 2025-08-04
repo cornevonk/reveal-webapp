@@ -51,16 +51,19 @@ export default function ProgressNav() {
     <nav className="fixed top-4 right-4 z-50">
       <ul className="space-y-2">
         {sectionIds.map((id) => (
-          <Motion.li
-            key={id}
-            className={`w-3 h-3 rounded-full border cursor-pointer ${
-              active === id
-                ? 'bg-teal-500 border-teal-500'
-                : 'bg-gray-200 border-gray-300'
-            }`}
-            animate={{ scale: active === id ? 1.2 : 1 }}
-            onClick={() => handleClick(id)}
-          />
+          <li key={id}>
+            <Motion.button
+              type="button"
+              aria-label={`Go to ${id} section`}
+              className={`w-3 h-3 rounded-full border cursor-pointer ${
+                active === id
+                  ? 'bg-teal-500 border-teal-500'
+                  : 'bg-gray-200 border-gray-300'
+              }`}
+              animate={{ scale: active === id ? 1.2 : 1 }}
+              onClick={() => handleClick(id)}
+            />
+          </li>
         ))}
       </ul>
     </nav>
