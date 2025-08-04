@@ -1,5 +1,6 @@
 import React from 'react';
 import { motion as Motion } from 'framer-motion';
+import WrappedSection from '../components/WrappedSection';
 
 export default function GrowthSection() {
   const timeline = [
@@ -10,7 +11,7 @@ export default function GrowthSection() {
   ];
 
   return (
-    <section id="growth" className="min-h-screen bg-gray-50 px-4 py-20 flex flex-col items-center justify-center text-center">
+    <WrappedSection id="growth" bgGradient="bg-gray-50">
       <Motion.h2 className="text-4xl md:text-5xl font-semibold text-center mb-8">
         De impact die jij maakt
       </Motion.h2>
@@ -28,6 +29,6 @@ export default function GrowthSection() {
           </Motion.div>
         ))}
       </div>
-    </section>
+    </WrappedSection>
   );
 }

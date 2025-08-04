@@ -1,9 +1,10 @@
 import React from 'react';
 import { motion as Motion } from 'framer-motion';
+import WrappedSection from '../components/WrappedSection';
 
 export default function FinalCTASection() {
   return (
-    <section id="cta" className="min-h-screen flex flex-col items-center justify-center bg-gray-50 px-4 py-20 text-center">
+    <WrappedSection id="cta" bgGradient="bg-gray-50">
       <Motion.h2 className="text-4xl md:text-5xl font-semibold text-center mb-6">
         Deze functie past bij jou…
       </Motion.h2>
@@ -23,6 +24,6 @@ export default function FinalCTASection() {
           Deel profiel
         </button>
       </Motion.div>
-    </section>
+    </WrappedSection>
   );
 }
