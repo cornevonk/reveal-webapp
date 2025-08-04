@@ -16,10 +16,10 @@ export default function FinalCTASection() {
         ))}
       </Motion.ul>
       <Motion.div initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} transition={{ delay: 0.5 }}>
-        <button className="mx-2 px-6 py-3 bg-black text-white rounded-full hover:bg-neutral-800 transition">
+        <button type="button" className="mx-2 px-6 py-3 bg-black text-white rounded-full hover:bg-neutral-800 transition">
           Terug naar overzicht
         </button>
-        <button className="mx-2 px-6 py-3 border border-neutral-300 bg-white text-neutral-700 rounded-full hover:bg-neutral-100 transition">
+        <button type="button" className="mx-2 px-6 py-3 border border-neutral-300 bg-white text-neutral-700 rounded-full hover:bg-neutral-100 transition">
           Deel profiel
         </button>
       </Motion.div>
