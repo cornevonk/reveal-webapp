@@ -23,6 +23,8 @@ export default function ResponsibilitiesSection() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: idx * 0.2 }}
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
           >
             <div className="h-12 w-12 bg-teal-100 rounded-full mb-4 flex items-center justify-center">
               {/* Icon placeholder */}

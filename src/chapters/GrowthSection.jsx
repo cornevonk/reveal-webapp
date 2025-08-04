@@ -16,7 +16,13 @@ export default function GrowthSection() {
       </Motion.h2>
       <div className="max-w-3xl mx-auto space-y-16">
         {timeline.map(([month, text], i) => (
-          <Motion.div key={i} initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} transition={{ delay: i * 0.3 }}>
+          <Motion.div
+            key={i}
+            initial={{ x: -100, opacity: 0 }}
+            whileInView={{ x: 0, opacity: 1 }}
+            viewport={{ once: true }}
+            transition={{ type: 'spring', stiffness: 100, delay: i * 0.2 }}
+          >
             <h4 className="text-2xl font-semibold mb-2">{month}</h4>
             <p className="text-neutral-600 leading-relaxed">{text}</p>
           </Motion.div>
