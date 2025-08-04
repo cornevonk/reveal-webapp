@@ -1,19 +1,6 @@
 import React from 'react';
 import { motion as Motion } from 'framer-motion';
-
-const container = {
-  hidden: {},
-  visible: {
-    transition: {
-      staggerChildren: 0.3,
-    },
-  },
-};
-
-const item = {
-  hidden: { opacity: 0, y: 20 },
-  visible: { opacity: 1, y: 0 },
-};
+import { container, item } from '../utils/motionVariants';
 
 export default function MissionSection() {
   return (
