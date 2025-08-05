@@ -34,9 +34,9 @@ export default function ShareProfile() {
   return (
     <section
       id="share"
-      className="min-h-screen flex flex-col items-center justify-center bg-gray-50 px-4 py-20 text-center"
+      className="min-h-screen flex flex-col items-center justify-center bg-gray-50 dark:bg-gray-900 px-4 py-20 text-center"
     >
-      <Motion.h2 className="text-3xl md:text-4xl font-semibold text-center mb-6">
+      <Motion.h2 className="text-3xl md:text-4xl font-semibold text-center mb-6 text-neutral-900 dark:text-neutral-100">
         Deel je profiel met de wereld
       </Motion.h2>
       <Motion.div
@@ -48,7 +48,7 @@ export default function ShareProfile() {
         <div className="p-[2px] rounded-full bg-gradient-to-r from-teal-400 via-blue-500 to-purple-600">
           <Motion.button
             type="button"
-            className="flex items-center gap-2 px-4 py-2 bg-white rounded-full text-black"
+            className="flex items-center gap-2 px-4 py-2 bg-white rounded-full text-black dark:bg-gray-800 dark:text-white"
             whileHover={{ scale: 1.1, rotate: 1 }}
             whileTap={{ scale: 0.95 }}
             onClick={handleLinkedInShare}
@@ -61,7 +61,7 @@ export default function ShareProfile() {
         <div className="p-[2px] rounded-full bg-gradient-to-r from-teal-400 via-blue-500 to-purple-600">
           <Motion.button
             type="button"
-            className="flex items-center gap-2 px-4 py-2 bg-white rounded-full text-black"
+            className="flex items-center gap-2 px-4 py-2 bg-white rounded-full text-black dark:bg-gray-800 dark:text-white"
             whileHover={{ scale: 1.1, rotate: 1 }}
             whileTap={{ scale: 0.95 }}
             onClick={handleWhatsAppShare}
@@ -74,7 +74,7 @@ export default function ShareProfile() {
         <div className="p-[2px] rounded-full bg-gradient-to-r from-teal-400 via-blue-500 to-purple-600">
           <Motion.button
             type="button"
-            className="flex items-center gap-2 px-4 py-2 bg-white rounded-full text-black"
+            className="flex items-center gap-2 px-4 py-2 bg-white rounded-full text-black dark:bg-gray-800 dark:text-white"
             whileHover={{ scale: 1.1, rotate: 1 }}
             whileTap={{ scale: 0.95 }}
             onClick={handleDownload}
@@ -85,7 +85,7 @@ export default function ShareProfile() {
           </Motion.button>
         </div>
       </Motion.div>
-      <p className="mt-6 text-lg font-medium bg-gradient-to-r from-teal-500 via-blue-500 to-purple-600 bg-clip-text text-transparent animate-pulse">
+      <p className="mt-6 text-lg font-medium bg-gradient-to-r from-teal-500 via-blue-500 to-purple-600 bg-clip-text text-transparent animate-pulse dark:from-teal-400 dark:via-blue-400 dark:to-purple-500">
         Laat zien dat jij de AI-held bent!
       </p>
       <ScrollButton targetId="landing" direction="up">

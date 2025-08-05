@@ -11,8 +11,8 @@ export default function GrowthSection() {
   ];
 
   return (
-    <section id="growth" className="min-h-screen bg-gray-50 px-4 py-20 flex flex-col items-center justify-center text-center">
-      <Motion.h2 className="text-4xl md:text-5xl font-semibold text-center mb-8">
+    <section id="growth" className="min-h-screen bg-gray-50 dark:bg-gray-900 px-4 py-20 flex flex-col items-center justify-center text-center">
+      <Motion.h2 className="text-4xl md:text-5xl font-semibold text-center mb-8 text-neutral-900 dark:text-neutral-100">
         De impact die jij maakt
       </Motion.h2>
       <div className="max-w-3xl mx-auto space-y-16">
@@ -24,8 +24,8 @@ export default function GrowthSection() {
             viewport={{ once: true }}
             transition={{ type: 'spring', stiffness: 100, delay: i * 0.2 }}
           >
-            <h4 className="text-2xl font-semibold mb-2">{month}</h4>
-            <p className="text-neutral-600 leading-relaxed">{text}</p>
+            <h4 className="text-2xl font-semibold mb-2 text-neutral-900 dark:text-neutral-100">{month}</h4>
+            <p className="text-neutral-600 dark:text-neutral-300 leading-relaxed">{text}</p>
           </Motion.div>
         ))}
       </div>

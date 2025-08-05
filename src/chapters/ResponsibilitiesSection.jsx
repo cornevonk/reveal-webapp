@@ -4,9 +4,9 @@ import ScrollButton from '../components/ScrollButton';
 
 export default function ResponsibilitiesSection() {
   return (
-    <section id="responsibilities" className="min-h-screen bg-gray-50 px-4 py-20 flex flex-col items-center justify-center text-center">
+    <section id="responsibilities" className="min-h-screen bg-gray-50 dark:bg-gray-900 px-4 py-20 flex flex-col items-center justify-center text-center">
       <Motion.h2
-        className="text-4xl md:text-5xl font-semibold text-center mb-8"
+        className="text-4xl md:text-5xl font-semibold text-center mb-8 text-neutral-900 dark:text-neutral-100"
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
@@ -19,7 +19,7 @@ export default function ResponsibilitiesSection() {
         {['Ontwerpen van AI-workflows','Frontend-interactie optimaliseren','Infra automatisering','Samenwerking met AI-specialisten'].map((title, idx) => (
           <Motion.div
             key={idx}
-            className="rounded-2xl shadow-sm border border-neutral-200 p-6 bg-white hover:shadow-md transition"
+            className="rounded-2xl shadow-sm border border-neutral-200 p-6 bg-white hover:shadow-md dark:bg-gray-800 dark:border-neutral-700 transition"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -27,12 +27,12 @@ export default function ResponsibilitiesSection() {
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
           >
-            <div className="h-12 w-12 bg-teal-100 rounded-full mb-4 flex items-center justify-center">
+            <div className="h-12 w-12 bg-teal-100 dark:bg-teal-900 rounded-full mb-4 flex items-center justify-center">
               {/* Icon placeholder */}
-              <span className="text-teal-600 font-bold">{idx+1}</span>
+              <span className="text-teal-600 dark:text-teal-300 font-bold">{idx+1}</span>
             </div>
-            <h3 className="text-xl font-medium mb-2">{title}</h3>
-            <p className="text-neutral-600">Korte uitleg over {title.toLowerCase()}.</p>
+            <h3 className="text-xl font-medium mb-2 text-neutral-900 dark:text-neutral-100">{title}</h3>
+            <p className="text-neutral-600 dark:text-neutral-300">Korte uitleg over {title.toLowerCase()}.</p>
           </Motion.div>
         ))}
       </div>

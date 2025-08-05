@@ -4,7 +4,7 @@
 
 @layer base {
   body {
-    @apply m-0 min-h-screen font-sans bg-gradient-to-b from-white via-slate-50 to-slate-100 text-neutral-700;
+    @apply m-0 min-h-screen font-sans bg-gradient-to-b from-white via-slate-50 to-slate-100 text-neutral-700 dark:from-slate-900 dark:via-slate-900 dark:to-slate-800 dark:text-neutral-100;
   }
 }
 
@@ -13,13 +13,13 @@
     @apply max-w-4xl mx-auto px-6 py-24 space-y-12;
   }
   .headline {
-    @apply font-bold text-5xl md:text-6xl tracking-tight text-neutral-900;
+    @apply font-bold text-5xl md:text-6xl tracking-tight text-neutral-900 dark:text-neutral-100;
   }
   .subheader {
-    @apply text-xl text-neutral-600;
+    @apply text-xl text-neutral-600 dark:text-neutral-300;
   }
   .body-text {
-    @apply text-base text-neutral-700 leading-relaxed;
+    @apply text-base text-neutral-700 leading-relaxed dark:text-neutral-300;
   }
   .text-gradient {
     @apply bg-clip-text text-transparent bg-gradient-to-r from-lime-400 via-sky-400 to-violet-500;
@@ -28,9 +28,9 @@
     @apply rounded-full px-6 py-3 hover:scale-105 transition;
   }
   .btn-primary {
-    @apply text-white bg-sky-500;
+    @apply text-white bg-sky-500 dark:bg-sky-600;
   }
   .btn-outline {
-    @apply bg-white text-black ring-2 ring-black;
+    @apply bg-white text-black ring-2 ring-black dark:bg-transparent dark:text-white dark:ring-white;
   }
 }

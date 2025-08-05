@@ -7,14 +7,14 @@ export default function MissionSection() {
   return (
     <Motion.section
       id="mission"
-      className="min-h-screen flex flex-col items-center justify-center bg-white px-4 py-20 text-center"
+      className="min-h-screen flex flex-col items-center justify-center bg-white dark:bg-gray-900 px-4 py-20 text-center"
       initial="hidden"
       whileInView="visible"
       viewport={{ once: true }}
       variants={container}
     >
       <Motion.h2
-        className="text-4xl md:text-5xl font-semibold text-center mb-6"
+        className="text-4xl md:text-5xl font-semibold text-center mb-6 text-neutral-900 dark:text-neutral-100"
         variants={item}
         transition={{ duration: 0.8 }}
       >
@@ -22,7 +22,7 @@ export default function MissionSection() {
       </Motion.h2>
 
       <Motion.p
-        className="text-xl md:text-2xl text-neutral-800 font-light text-center max-w-3xl leading-relaxed"
+        className="text-xl md:text-2xl text-neutral-800 dark:text-neutral-300 font-light text-center max-w-3xl leading-relaxed"
         variants={item}
         transition={{ duration: 0.8 }}
       >
