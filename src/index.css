@@ -4,7 +4,7 @@
 
 @layer base {
   body {
-    @apply m-0 min-h-screen font-sans bg-gradient-to-b from-white via-slate-50 to-slate-100 text-neutral-700;
+    @apply m-0 min-h-screen font-sans bg-gradient-to-br from-slate-50 via-emerald-50 to-violet-100 text-slate-700;
   }
 }
 
@@ -22,15 +22,24 @@
     @apply text-base text-neutral-700 leading-relaxed;
   }
   .text-gradient {
-    @apply bg-clip-text text-transparent bg-gradient-to-r from-lime-400 via-sky-400 to-violet-500;
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-emerald-400 via-sky-400 to-violet-500;
   }
   .btn {
-    @apply rounded-full px-6 py-3 hover:scale-105 transition;
+    @apply rounded-full px-6 py-3 font-medium hover:scale-105 transition;
   }
   .btn-primary {
-    @apply text-white bg-sky-500;
+    @apply text-white bg-emerald-500 hover:bg-emerald-600 shadow-glow;
   }
   .btn-outline {
-    @apply bg-white text-black ring-2 ring-black;
+    @apply bg-white/60 text-emerald-700 ring-2 ring-emerald-500 hover:bg-emerald-50;
+  }
+  .btn-secondary {
+    @apply text-white bg-violet-500 hover:bg-violet-600 shadow-glow;
+  }
+  .glass {
+    @apply bg-white/40 backdrop-blur-md backdrop-brightness-110 border border-white/40 shadow-glass;
+  }
+  .card {
+    @apply glass rounded-xl p-6;
   }
 }
