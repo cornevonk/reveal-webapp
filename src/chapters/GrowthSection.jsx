@@ -1,5 +1,6 @@
 import React from 'react';
 import { motion as Motion } from 'framer-motion';
+import ScrollButton from '../components/ScrollButton';
 
 export default function GrowthSection() {
   const timeline = [
@@ -28,6 +29,7 @@ export default function GrowthSection() {
           </Motion.div>
         ))}
       </div>
+      <ScrollButton targetId="cta" />
     </section>
   );
 }

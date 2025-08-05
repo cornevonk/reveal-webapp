@@ -1,6 +1,7 @@
 import React from 'react';
 import { motion as Motion } from 'framer-motion';
 import { container, item } from '../utils/motionVariants';
+import ScrollButton from '../components/ScrollButton';
 
 export default function MissionSection() {
   return (
@@ -27,6 +28,7 @@ export default function MissionSection() {
       >
         Onze AI-strategie heeft bruggenbouwers nodig. Jij maakt complexe technologie begrijpelijk, schaalbaar en menselijk.
       </Motion.p>
+      <ScrollButton targetId="responsibilities" />
 
       {/* Parallax-achtergrondvisual volgt hier */}
     </Motion.section>
