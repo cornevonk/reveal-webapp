@@ -1,5 +1,6 @@
 import React from 'react';
 import { motion as Motion } from 'framer-motion';
+import ScrollButton from '../components/ScrollButton';
 
 export default function ResponsibilitiesSection() {
   return (
@@ -35,6 +36,7 @@ export default function ResponsibilitiesSection() {
           </Motion.div>
         ))}
       </div>
+      <ScrollButton targetId="superpowers" />
     </section>
   );
 }

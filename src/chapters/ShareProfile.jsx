@@ -1,6 +1,7 @@
 import React from 'react';
 import { motion as Motion } from 'framer-motion';
 import { FaLinkedin, FaWhatsapp, FaDownload } from 'react-icons/fa6';
+import ScrollButton from '../components/ScrollButton';
 import html2canvas from 'html2canvas';
 
 export default function ShareProfile() {
@@ -87,6 +88,9 @@ export default function ShareProfile() {
       <p className="mt-6 text-lg font-medium bg-gradient-to-r from-teal-500 via-blue-500 to-purple-600 bg-clip-text text-transparent animate-pulse">
         Laat zien dat jij de AI-held bent!
       </p>
+      <ScrollButton targetId="landing" direction="up">
+        Terug naar begin
+      </ScrollButton>
     </section>
   );
 }

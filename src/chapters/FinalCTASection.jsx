@@ -1,5 +1,6 @@
 import React from 'react';
 import { motion as Motion } from 'framer-motion';
+import ScrollButton from '../components/ScrollButton';
 
 export default function FinalCTASection() {
   return (
@@ -23,6 +24,7 @@ export default function FinalCTASection() {
           Deel profiel
         </button>
       </Motion.div>
+      <ScrollButton targetId="share" />
     </section>
   );
 }

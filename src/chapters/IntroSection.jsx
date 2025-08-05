@@ -2,6 +2,7 @@
 import React from 'react';
 import { motion as Motion } from 'framer-motion';
 import { container, fadeUp, scaleIn } from '../utils/motionVariants';
+import ScrollButton from '../components/ScrollButton';
 
 export default function IntroSection() {
   return (
@@ -36,6 +37,7 @@ export default function IntroSection() {
       >
         Je combineert creativiteit met controle. Je schakelt tussen frontend elegantie en backend robuustheid, met AI als ultiem hulpmiddel.
       </Motion.p>
+      <ScrollButton targetId="mission" />
     </Motion.section>
   );
 }
