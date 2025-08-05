@@ -8,14 +8,14 @@ export default function IntroSection() {
   return (
     <Motion.section
       id="intro"
-      className="min-h-screen flex flex-col items-center justify-center bg-gray-50 px-4 py-20 text-center"
+      className="min-h-screen flex flex-col items-center justify-center bg-gray-50 dark:bg-gray-900 px-4 py-20 text-center"
       initial="hidden"
       whileInView="visible"
       viewport={{ once: true }}
       variants={container}
     >
       <Motion.h2
-        className="text-4xl md:text-5xl font-semibold text-center mb-6"
+        className="text-4xl md:text-5xl font-semibold text-center mb-6 text-neutral-900 dark:text-neutral-100"
         variants={fadeUp}
         transition={{ duration: 0.8 }}
       >
@@ -31,7 +31,7 @@ export default function IntroSection() {
       />
 
       <Motion.p
-        className="text-lg md:text-xl text-neutral-600 max-w-2xl leading-relaxed"
+        className="text-lg md:text-xl text-neutral-600 dark:text-neutral-300 max-w-2xl leading-relaxed"
         variants={fadeUp}
         transition={{ duration: 0.8 }}
       >
